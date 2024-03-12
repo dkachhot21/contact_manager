@@ -45,6 +45,10 @@ const swaggerOptions = {
                 url: 'http://localhost:3000/',
                 description: 'Local server',
             },
+            {
+                url:'https://contact-manager-backend-api-b39f.onrender.com/',
+                description:'Render Deployment Server',
+            }
         ],
     },
     apis: ['./routes/*.js'],
@@ -60,11 +64,8 @@ app.get('/', (req, res) => {
 });
 
 //Middleware
-var corsOptions = {
-    origin: ['http://localhost:3000'],
-    optionsSuccessStatus: 200,
-}
-app.use(cors(corsOptions));
+
+app.use(cors());
 app.use(express.json()); //Parsing the JSON data  from client side to server side
 
 //Connect to Database
