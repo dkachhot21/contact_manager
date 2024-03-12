@@ -2,6 +2,7 @@
 const express = require('express');
 const dotenv = require('dotenv').config();
 const cors = require('cors');
+app.use(cors());
 const contactRoutes = require("./routes/contactRoutes");
 const userRoutes = require("./routes/userRoutes");
 const errorHandler = require('./middleware/errorHandler');
@@ -60,7 +61,6 @@ app.get('/', (req, res) => {
 });
 
 //Middleware
-app.use(cors);
 app.use(express.json()); //Parsing the JSON data  from client side to server side
 
 //Connect to Database
