@@ -42,12 +42,8 @@ const swaggerOptions = {
         // },],
         servers: [
             {
-                url: 'http://localhost:3000/',
+                url: 'https://localhost:3000/',
                 description: 'Local server',
-            },
-            {
-                url:'https://contact-manager-backend-api-b39f.onrender.com/',
-                description: 'Deployment Server',
             },
         ],
     },
@@ -65,7 +61,7 @@ app.get('/', (req, res) => {
 
 //Middleware
 var corsOptions = {
-    origin: ['http://localhost:3000'],
+    origin: ['https://localhost:3000'],
     optionsSuccessStatus: 200,
 }
 app.use(cors(corsOptions));
