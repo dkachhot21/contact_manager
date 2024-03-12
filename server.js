@@ -45,6 +45,10 @@ const swaggerOptions = {
                 url: 'http://localhost:3000/',
                 description: 'Local server',
             },
+            {
+                url:'https://contact-manager-backend-api-b39f.onrender.com',
+                description: 'Deployment Server',
+            },
         ],
     },
     apis: ['./routes/*.js'],
