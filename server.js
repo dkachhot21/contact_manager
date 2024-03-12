@@ -42,7 +42,7 @@ const swaggerOptions = {
         // },],
         servers: [
             {
-                url: 'https://localhost:3000/',
+                url: 'http://localhost:3000/',
                 description: 'Local server',
             },
         ],
@@ -61,7 +61,7 @@ app.get('/', (req, res) => {
 
 //Middleware
 var corsOptions = {
-    origin: ['https://localhost:3000'],
+    origin: ['http://localhost:3000'],
     optionsSuccessStatus: 200,
 }
 app.use(cors(corsOptions));
