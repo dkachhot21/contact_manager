@@ -75,8 +75,8 @@ app.use(express.json()); //Parsing the JSON data  from client side to server sid
 connectDB();
 
 //Routes
-app.use("/api/contact", contactRoutes);
-app.use("/api/user", userRoutes);
+app.use("/contact", contactRoutes);
+app.use("/user", userRoutes);
 
 app.use(errorHandler);
 app.listen(PORT, () => {

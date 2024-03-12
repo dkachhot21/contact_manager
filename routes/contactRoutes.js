@@ -8,7 +8,7 @@ router.use(validateToken); // Validate the token before any route is accessed
 
 /**
  * @swagger
- * /api/contacts:
+ * /contacts:
  *  get:
  *      tags:
  *          - 2.) Authorization and CRUD
@@ -35,7 +35,7 @@ router.route("/").get(getContacts);
 
 /**
  * @swagger
- * /api/contacts:
+ * /contacts:
  *  post:
  *      tags:
  *          - 2.) Authorization and CRUD
@@ -81,7 +81,7 @@ router.route("/").post(createContact);
 
 /**
  * @swagger
- * /api/contacts/{id}:
+ * /contacts/{id}:
  *  get:
  *      tags:
  *          - 2.) Authorization and CRUD
@@ -115,7 +115,7 @@ router.route("/:id").get(getContact);
 
 /**
  * @swagger
- * /api/contacts/{id}:
+ * /contacts/{id}:
  *  put:
  *      tags:
  *          - 2.) Authorization and CRUD
@@ -169,7 +169,7 @@ router.route("/:id").put(updateContact)
 
 /**
  * @swagger
- * /api/contacts/{id}:
+ * /contacts/{id}:
  *  delete:
  *      tags:
  *          - 2.) Authorization and CRUD
