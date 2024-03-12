@@ -60,7 +60,7 @@ app.get('/', (req, res) => {
 });
 
 //Middleware
-app.use(cors())
+app.use(cors);
 app.use(express.json()); //Parsing the JSON data  from client side to server side
 
 //Connect to Database
