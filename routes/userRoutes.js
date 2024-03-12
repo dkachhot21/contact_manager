@@ -7,7 +7,7 @@ const router = express.Router();
 
 /**
  * @swagger
- * /users/register:
+ * /user/register:
  *  post:
  *      tags:
  *          - 1.) Authentication
@@ -51,7 +51,7 @@ router.route('/register').post(registerUser);
 
 /**
  * @swagger
- * /users/login:
+ * /user/login:
  *  post:
  *      tags:
  *          - 1.) Authentication
@@ -90,7 +90,7 @@ router.route('/login').post(loginUser);
 
 /**
  * @swagger
- * /users/current:
+ * /user/current:
  *  get:
  *      tags:
  *          - 1.) Authentication
