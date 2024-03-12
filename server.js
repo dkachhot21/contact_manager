@@ -2,6 +2,7 @@
 const express = require('express');
 const dotenv = require('dotenv').config();
 const cors = require('cors');
+const app = express();
 app.use(cors());
 const contactRoutes = require("./routes/contactRoutes");
 const userRoutes = require("./routes/userRoutes");
@@ -12,7 +13,6 @@ const swaggerUI = require('swagger-ui-express');
 const PORT = process.env.PORT || 3000;
 
 //Initialize Express app
-const app = express();
 
 //Swagger setup
 const swaggerOptions = {
