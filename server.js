@@ -15,14 +15,14 @@ const app = express();
 
 //Swagger setup
 const swaggerOptions = {
-    
+
     swaggerDefinition: {
         openapi: '3.0.3',
         info: {
             title: 'Backend Infrastructure of a Contact Manager Application',
-            description:'**1.) Authentication:**\n\n \ta.) User First Registers in the platform\n\n\tb.) Login will return an access token \n\n\tc.) Use token for authorization in the authorization button\n\n'+
-            '**2.) Authorization and CRUD:**\n\n \ta.) Create some contacts under the existing user i.e {POST: /api/contacts} (one with the current token)\n\n\tb.)Use the other routes to perform the CRUD operations\n\n'+
-            '*NOTE* : The token will expire every 30 min for demonstration purposes, the user needs to login again after 30 min ',
+            description: '**1.) Authentication:**\n\n \ta.) User First Registers in the platform\n\n\tb.) Login will return an access token \n\n\tc.) Use token for authorization in the authorization button\n\n' +
+                '**2.) Authorization and CRUD:**\n\n \ta.) Create some contacts under the existing user i.e {POST: /api/contacts} (one with the current token)\n\n\tb.)Use the other routes to perform the CRUD operations\n\n' +
+                '*NOTE* : The token will expire every 30 min for demonstration purposes, the user needs to login again after 30 min ',
             version: '0.0.1',
         },
         components: {
@@ -42,11 +42,11 @@ const swaggerOptions = {
         // },],
         servers: [
             {
-            url: 'http://localhost:3000/',
-            description: 'Local server',
+                url: 'http://localhost:3000/',
+                description: 'Local server',
             },
         ],
-    }, 
+    },
     apis: ['./routes/*.js'],
 };
 
@@ -60,7 +60,11 @@ app.get('/', (req, res) => {
 });
 
 //Middleware
-app.use(cors({origin: '*'}));
+var corsOptions = {
+    origin: '*',
+    optionsSuccessStatus: 200,
+}
+app.use(cors(corsOptions));
 app.use(express.json()); //Parsing the JSON data  from client side to server side
 
 //Connect to Database
