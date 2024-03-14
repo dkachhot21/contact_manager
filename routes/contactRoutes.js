@@ -116,7 +116,7 @@ router.route("/:id").get(getContact);
 /**
  * @swagger
  * /contact/{id}:
- *  put:
+ *  patch:
  *      tags:
  *          - 2.) Authorization and CRUD
  *      summary: "updates single contact"
@@ -165,7 +165,7 @@ router.route("/:id").get(getContact);
  *                          "phone": "111111"
  *
  */
-router.route("/:id").put(updateContact)
+router.route("/:id").patch(updateContact)
 
 /**
  * @swagger
